@@ -25,19 +25,25 @@ const Deck = () => {
     return (
         <div>
             <form name='cardNum' onChange={(e) => {handleChange(e)}}>
-                <input type="text" />
+                <input type="text" placeholder='How Many' />
                 <button onClick={cardData}>X</button>
+
             </form>
+           
             <div className='card-display'>
 
                 {cards && cards.cards.map((card, index) => {
+                   
                     return (
                         <div key={index}>
                             <img src={card.image} alt="card" srcset="" />
-                            <h2>{cards.remaining}</h2>
+                           
                         </div>
                     )
+                    
                 })}
+               
+            
             </div>
         </div>
     );
