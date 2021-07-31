@@ -1,54 +1,51 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Nav from './Nav';
 
-
 const Deck = () => {
-    const [cardNum, setCardNum] = useState('');
-    const [cards, setCards] = useState(null);
+	const [cardNum, setCardNum] = useState('');
+	const [cards, setCards] = useState(null);
 
-    const cardData = (e) => {
-        e.preventDefault();
-        fetch(
-					`https://deckofcardsapi.com/api/deck/new/draw/?count=${cardNum}`
-				)
-                .then(res => res.json())
-                .then(data => {setCards(data)
-                console.log(data);});
-               
+	const cardData = (e) => {
+		e.preventDefault();
+		fetch(`https://deckofcardsapi.com/api/deck/new/draw/?count=${cardNum}`)
+			.then((res) => res.json())
+			.then((data) => {
+				setCards(data);
+				console.log(data);
+			});
+	};
+	const handleChange = (e) => {
+		e.preventDefault();
+		setCardNum(e.target.value);
+	};
 
-    }
-    const handleChange = (e) => {
-        e.preventDefault();
-        setCardNum(e.target.value)
-    }
-
-    return (
-        <div>
+	return (
+		<div>
             
-            <form className = 'form-top' name='cardNum' onChange={(e) => {handleChange(e)}}>
-            
-                <input type="text" placeholder='How Many' />
-                <button onClick={cardData}>X</button>
-
-            </form>
-           
-            <div className='card-display'>
-
-                {cards && cards.cards.map((card, index) => {
-                   
-                    return (
-                        <div key={index}>
-                            <img src={card.image} alt="card" srcset="" />
-                           
-                        </div>
-                    )
-                    
-                })}
-               
-            
-            </div>
-        </div>
-    );
+            <div className = 'form-div'>
+                <h1>Card Shuffle</h1>
+			<form
+				className='form-top'
+				name='cardNum'
+				onChange={(e) => {
+					handleChange(e);
+				}}>
+				<input type='text' placeholder='How Many' />
+				<button onClick={cardData}>Deal</button>
+			</form>
+                    </div>
+			<div className='card-display'>
+				{cards &&
+					cards.cards.map((card, index) => {
+						return (
+							<div key={index}>
+								<img src={card.image} alt='card' srcset='' />
+							</div>
+						);
+					})}
+			</div>
+		</div>
+	);
 };
 
 export default Deck;

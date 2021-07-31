@@ -16,28 +16,23 @@ flex-wrap: wrap;
 justify-content: space-around;
 
 }
-h2 { color: greenyellow;}
-
-/* 
-ul {list-style: none;
-
-
-} */
-/* li{
-  display: inline;
-background-color: greenyellow;
-margin-right: 50%;
-} */
-
-
-.form-top{
+h1{
+  color: #489c79
+}
+.form-div{
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center;
+  /* background-color: blue; */
+  justify-content: space-between;
   align-items: center;
-  align-content: center; */
-  background-color: red;
-   
+  flex-wrap: wrap;
   
-
+}
+input{
+ background-color:  black;
+ border: 5px solid #bcbb91;
+ padding: 8px;
+ color: white;
+}
+::placeholder{
+  color: #bcbb91;
 }
