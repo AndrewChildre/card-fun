@@ -17,7 +17,9 @@ justify-content: space-around;
 
 }
 h1{
-  color: #489c79
+  color: #bcbb91;
+  font-size: 50px;
+  margin: 0px
 }
 .form-div{
   display: flex;
@@ -25,13 +27,32 @@ h1{
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  
+  margin: 10px;
 }
 input{
  background-color:  black;
- border: 5px solid #bcbb91;
- padding: 8px;
+ /* border: 2px solid #bcbb91; */
+ border-radius: 5px;
+ border: 1px solid #bcbb91;
+ padding: 12px;
  color: white;
+ margin-right: 10px;
+
+}
+:focus{
+outline-color: #bcbb91;
+
+
+
+}
+
+button{
+ width: 70px;
+ height: 40px;
+  background-color:  black;
+ border: 1px solid #bcbb91;
+ border-radius: 5px;
+ color: #bcbb91;
 }
 ::placeholder{
   color: #bcbb91;

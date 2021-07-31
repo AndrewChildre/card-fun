@@ -4,6 +4,7 @@ import Nav from './Nav';
 const Deck = () => {
 	const [cardNum, setCardNum] = useState('');
 	const [cards, setCards] = useState(null);
+    
 
 	const cardData = (e) => {
 		e.preventDefault();
@@ -11,14 +12,16 @@ const Deck = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				setCards(data);
-				console.log(data);
+     
+          
 			});
 	};
-	const handleChange = (e) => {
-		e.preventDefault();
-		setCardNum(e.target.value);
+	const handleChange = () => {
+		// e.preventDefault();
+	
+    
 	};
-
+   
 	return (
 		<div>
             
@@ -27,12 +30,16 @@ const Deck = () => {
 			<form
 				className='form-top'
 				name='cardNum'
-				onChange={(e) => {
-					handleChange(e);
-				}}>
-				<input type='text' placeholder='How Many' />
+                onChange={(e) => {
+			setCardNum(e.target.value);
+				}}
+				>
+				<input  id='text-box' type='text' placeholder='How Many' />
 				<button onClick={cardData}>Deal</button>
+                
 			</form>
+           
+            
                     </div>
 			<div className='card-display'>
 				{cards &&
