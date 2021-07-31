@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import Nav from './Nav';
 
 
 const Deck = () => {
@@ -24,7 +24,9 @@ const Deck = () => {
 
     return (
         <div>
-            <form name='cardNum' onChange={(e) => {handleChange(e)}}>
+            
+            <form className = 'form-top' name='cardNum' onChange={(e) => {handleChange(e)}}>
+            
                 <input type="text" placeholder='How Many' />
                 <button onClick={cardData}>X</button>
 
