@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import Nav from './Nav';
+
 
 const Deck = () => {
 	const [cardNum, setCardNum] = useState('');
 	const [cards, setCards] = useState(null);
-    	const handleChange = (e) => {
-		// e.preventDefault();
+    // 	const handleChange = (e) => {
+	// 	// e.preventDefault();
      
     
-	};
+	// };
 
 	const cardData = (e) => {
 		e.preventDefault();
