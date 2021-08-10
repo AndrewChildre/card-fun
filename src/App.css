@@ -1,6 +1,4 @@
-/* .App {
-  text-align: center;
-} */
+/* 
 body {
  background-image: url('./CardBackground.webp');
   background-size: cover;
@@ -23,7 +21,7 @@ h1{
 }
 .form-div{
   display: flex;
-  /* background-color: blue; */
+
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -31,7 +29,7 @@ h1{
 }
 input{
  background-color:  black;
- /* border: 2px solid #bcbb91; */
+
  border-radius: 5px;
  border: 1px solid #bcbb91;
  padding: 12px;
@@ -56,4 +54,4 @@ button{
 }
 ::placeholder{
   color: #bcbb91;
-}
+} */
